@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THX.lol</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js" defer></script>
+    <!-- Fuentes de texto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="nav-container">
+        <nav class="navbar" id="main-navbar">
+                <a class="nav-item active" data-target="inicio">
+                    Inicio
+                </a>
+                <a class="nav-item" data-target="reproduciendo">
+                    Reproduciendo
+                </a>
+                <a class="nav-item" data-target="portafolio">
+                    Portafolio
+                </a>
+                <a class="nav-item" data-target="envivo">
+                    En vivo
+                </a>
+                <div class="nav-indicator"></div>
+        </nav>
+    </div>
+
+    <div id="inicio" class="content-section inicio active">
+        <div class="content-container">
+            <div class="inicio-content">
+                <h1 class="inicio-title">
+                    <span class="emoji">👋</span>Hola, soy ThelouisXD
+                </h1>
+                <p class="inicio-description">Bienvenido a mi sitio web. Aquí encontrarás contenido interesante y divertido.</p>
+            </div>
+            <div class="inicio-img">
+                <img src="https://cdn.discordapp.com/attachments/1128858709306260510/1139706460980929596/THX.lol.png" alt="Imagen de ThelouisXD">
+            </div>
+        </div>
+    </div>
+
+    <div id="reproduciendo" class="content-section">
+        <h1>Reproduciendo</h1>
+        <p>Contenido de la sección Reproduciendo.</p>
+    </div>
+
+    <div id="portafolio" class="content-section">
+        <h1>Portafolio</h1>
+        <p>Contenido de la sección Portafolio.</p>
+    </div>
+
+    <div id="envivo" class="content-section">
+        <div class="promocion">
+            <h1>En vivo</h1>
+            <p>¡Mira mi transmisión en vivo!</p>
+            <p>¡No olvides seguirme en Twitch!</p>
+        </div>
+        <div class="stream">
+            <iframe src="https://player.twitch.tv/?channel=thelouisxd&parent=http://127.0.0.1:5500/index.html.com" frameborder="0" allowfullscreen="true" scrolling="no" height="600" width="1000"></iframe>
+        </div>
+    </div>
+
+</body>
+</html>
