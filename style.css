@@ -139,10 +139,12 @@ body{
     margin: 90px 15px 0 15px;
 }
 
-#reproduciendo.content-container.active {
-    display: flex;
+.reproduciendo-content {
+    display: flex; 
+    flex-direction: row;
     align-items: center;
 }
+
 
 .album-art {
     max-width: 500px;
