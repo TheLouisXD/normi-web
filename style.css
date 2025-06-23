@@ -71,6 +71,7 @@ body{
 }
 
 .nav-item:hover {
+    font-weight: 400;
     color: black;
 }
 
@@ -78,7 +79,6 @@ body{
     background: white;
     border-radius: 20px;
     margin: 40px 90px 0 90px;
-    text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     min-height: 300px;
     display: none; /* Oculta todas las secciones por defecto */
@@ -134,9 +134,14 @@ body{
 #reproduciendo {
     background: none;
     overflow: hidden;
-    margin-top: 90px;
     color: var(--player-text-color);
     box-shadow: none;
+    margin: 90px 15px 0 15px;
+}
+
+#reproduciendo.content-container.active {
+    display: flex;
+    align-items: center;
 }
 
 .album-art {
@@ -157,12 +162,15 @@ body{
 }
 
 .song-details {
-    margin-top: 10%;
     margin-left: 15px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: start;
+}
+
+.song-details, .song-name, .artist-name {
+    text-shadow: 0 0 8px #fff, 0 0 1px #9135b4;
 }
 
 .song-name {
