@@ -77,7 +77,7 @@ body{
 
 .content-section {
     border-radius: 20px;
-    margin: 40px 90px 0 90px;
+    margin: 40px 7% 0 7%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     min-height: 300px;
     display: none; /* Oculta todas las secciones por defecto */
@@ -101,7 +101,7 @@ body{
 /* Contenido de inicio */
 
 #inicio {
-    background: rgba(118, 118, 118, 0.2);
+    background: rgba(85, 85, 85, 0.3);
     min-height: 530px;
     margin-top: 90px;
     backdrop-filter: blur(10px);
