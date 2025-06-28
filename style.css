@@ -90,7 +90,7 @@ body{
 
 .content-section.active {
     display: block; /* Solo la sección activa visible */
-    animation: fadeIn 0.5s ease; /* Animación al mostrar */
+    animation: fadeIn 0.7s ease; /* Animación al mostrar */
 }
 
 @keyframes fadeIn {
@@ -107,41 +107,79 @@ body{
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 2px solid rgba(112, 112, 112, 0.3);
+    color: white;
 }
 
 .inicio-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: flex-start; /* Alinea al inicio */
+    height: 100%; /* Ocupa toda la altura disponible */
+    margin-left: 1%;
+    margin-right: 15px;
 }
 
 .inicio-title h1 {
     text-decoration: underline;
     display: inline-block;
+    font-weight: bold;
+    margin-bottom: 0px;
 }
 
 .emoji {
   font-size: 1em;         /* Mantiene el tamaño igual al texto */
-  vertical-align: middle;   /* Centra verticalmente con el texto */
+  vertical-align: text-top;   /* Centra verticalmente con el texto */
   line-height: 1;           /* Reduce el espacio vertical */
   display: inline-block;    /* Opcional: mejora el control */
 }
 
-.inicio-description {
-    font-size: 18px;
-
+.inicio-subtitle {
+    font-weight: bold;
+    margin: -10px 0 0 0;
 }
 
+.inicio-description {
+    font-size: 18px;
+}
+
+.inicio-list{
+    margin-top: -10px;
+}
+
+/* social links */
+
+.social-links{
+    text-align: center;
+    margin-top: 80px; /* Asegura que los enlaces estén al final del contenedor */
+}
+
+.social-icons{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    align-items: center;
+}
+
+/* Imagen de al lado */
 .inicio-img {
     display: flex;
     position: relative;
     justify-content: center;
-    width: 100%;
+    min-width: 530px; /* Limita el ancho máximo de la imagen */
     height: 530px; /* Limita la altura máxima de la imagen */
     max-width: 600px; /* Limita el ancho máximo de la imagen */
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+}
+
+.folder-1, .folder-2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-image {
@@ -163,7 +201,7 @@ body{
     overflow: hidden;
     color: var(--player-text-color);
     box-shadow: none;
-    margin: 90px 15px 0 15px;
+    margin: 90px 30px 0 30px;
 }
 
 .reproduciendo-content {
