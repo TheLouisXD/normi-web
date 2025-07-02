@@ -45,3 +45,17 @@ document.addEventListener('DOMContentLoaded', function() {
         updateIndicator(this.document.querySelector('.nav-item.active'));
     })
 })
+
+document.addEventListener('DOMContentLoaded', function() {
+    const icons = document.querySelectorAll('.inicio-icons');
+
+    console.log('holaaaaaaaaa');
+
+    icons.forEach(icon => {
+        icon.addEventListener('click', function() {
+            alert('Hiciste click en un icono.');
+            alert('Pero nada a pasado ~(>_<。)＼');
+            alert('(O si? (。﹏。))');
+        });
+    });
+})
