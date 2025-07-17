@@ -59,3 +59,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 })
+
+document.addEventListener('DOMContentLoaded', function() {
+    const stream_date = document.querySelector('.stream-date');
+
+    // Función para calcular la diferencia de tiempo
+    function calculateTimeDifference(startDate) {
+        const now = new Date();
+        const diff = now - startDate;
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const months = Math.floor(days / 30);
+        const years = Math.floor(months / 12);
+
+        return `${years} año${years !== 1 ? 's' : ''}, ${months % 12} mes${months % 12 !== 1 ? 'es' : ''}, ${days % 30} día${days % 30 !== 1 ? 's' : ''}`;
+    }
+
+    calculateTimeDifference(Date('2024-03-07')); // Fecha de inicio del streaming
+    stream_date.textContent = calculateTimeDifference(new Date('2022-03-01'));
+})
