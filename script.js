@@ -78,3 +78,31 @@ document.addEventListener('DOMContentLoaded', function() {
     calculateTimeDifference(Date('2024-03-07')); // Fecha de inicio del streaming
     stream_date.textContent = calculateTimeDifference(new Date('2022-03-01'));
 })
+
+// --- Mostrar última canción escuchada usando Last.fm ---
+document.addEventListener('DOMContentLoaded', function() {
+    const apiKey = 'abf74485c14a6727d9f1454dc1a75a85'; // Reemplaza con tu API key de Last.fm
+    const user = 'THELouisXD0u0';   // Reemplaza con tu usuario de Last.fm
+
+    function updateLastSong() {
+        fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${user}&api_key=${apiKey}&format=json&limit=1`)
+            .then(response => response.json())
+            .then(data => {
+                const track = data.recenttracks.track[0];
+                if (track) {
+                    document.querySelector('.album-image').src = track.image[2]['#text'] || 'images/sdafsdfsd.png';
+                    document.querySelector('.song-title').textContent = track.name;
+                    document.querySelector('.artist-name').textContent = track.artist['#text'];
+                }
+            })
+            .catch(error => {
+                console.error('Error al obtener la canción:', error);
+            });
+    }
+
+    // Solo actualiza cuando la sección está visible
+    document.querySelector('[data-target="reproduciendo"]').addEventListener('click', updateLastSong);
+
+    // Opcional: actualiza al cargar la página
+    // updateLastSong();
+});
