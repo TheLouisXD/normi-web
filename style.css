@@ -241,6 +241,11 @@ body{
     position: absolute;
     height: 530px;  
     z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.05);
 }
 
 .hero-bg {
