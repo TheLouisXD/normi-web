@@ -203,10 +203,15 @@ body{
 }
 
 .social-logo{
-    width: 30px;
-    height: 30px;
+    font-size: 30px;
     margin: 0 10px;
-    transition: transform 0.3s ease;
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-logo:hover {
+    transform: scale(1.2);
+    color: var(--accent-color);
 }
 
 /* Imagen de al lado */
